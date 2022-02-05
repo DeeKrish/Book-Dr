@@ -1,0 +1,37 @@
+#Dr appointment booking project
+#create a new project 'Dr app2'(main project)
+pip install django
+django-admin startproject project
+CD project
+python manage.py startapp doctor
+python manage.py runserver
+----------------------------
+python manage.py migrate
+python manage.py runserver
+-----------------------------------
+#settings.py (better to copy the full file and enter your email id and pass word and turn on the smtp less secure app)
+#at last
+#Sending emails
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = "EADDRESS"
+EMAIL_HOST_PASSWORD = "EPASSWORD"
+-------------------------------------
+python manage.py makemigrations doctor
+python manage.py migrate doctor
+python manage.py createsuperuser
+System check identified some issues:
+
+WARNINGS:
+?: (staticfiles.W004) The directory 'C:\Users\S KRISHNA\PycharmProjects\dr app2\project\static
+' in the STATICFILES_DIRS setting does not exist.
+Username (leave blank to use 'skrishna'): Admin
+Email address: nagadeepthi12345@gmail.com
+Password:HCLdrapp
+Password (again):HCLdrapp
+Superuser created successfully.
+
+
+
